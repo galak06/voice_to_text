@@ -1,0 +1,53 @@
+{
+  "created": "2025-07-31T12:22:13.726293",
+  "last_updated": "2025-07-31T13:42:45.105328",
+  "status": "running",
+  "total_chunks": 5,
+  "processed_chunks": [
+    {
+      "name": "rachel_1_chunk_001.wav",
+      "output_file": "output/chunks/rachel_1_chunk_001_transcribed_20250731_122907.docx",
+      "status": "success",
+      "completed_at": "2025-07-31T12:43:09.626842"
+    },
+    {
+      "name": "rachel_1_chunk_002.wav",
+      "output_file": "output/chunks/rachel_1_chunk_002_transcribed_20250731_124311.docx",
+      "status": "success",
+      "completed_at": "2025-07-31T13:01:23.741471"
+    },
+    {
+      "name": "rachel_1_chunk_003.wav",
+      "output_file": "output/chunks/rachel_1_chunk_003_transcribed_20250731_130125.docx",
+      "status": "success",
+      "completed_at": "2025-07-31T13:18:33.243952"
+    },
+    {
+      "name": "rachel_1_chunk_004.wav",
+      "output_file": "output/chunks/rachel_1_chunk_004_transcribed_20250731_131835.docx",
+      "status": "success",
+      "completed_at": "2025-07-31T13:34:41.441317"
+    },
+    {
+      "name": "rachel_1_chunk_005.wav",
+      "output_file": "output/chunks/rachel_1_chunk_005_transcribed_20250731_133443.docx",
+      "status": "success",
+      "completed_at": "2025-07-31T13:42:45.105318"
+    }
+  ],
+  "failed_chunks": [],
+  "current_chunk": null,
+  "output_files": [
+    "output/chunks/rachel_1_chunk_001_transcribed_20250731_122907.docx",
+    "output/chunks/rachel_1_chunk_002_transcribed_20250731_124311.docx",
+    "output/chunks/rachel_1_chunk_003_transcribed_20250731_130125.docx",
+    "output/chunks/rachel_1_chunk_004_transcribed_20250731_131835.docx",
+    "output/chunks/rachel_1_chunk_005_transcribed_20250731_133443.docx"
+  ],
+  "settings": {
+    "model_size": "medium",
+    "enable_cache": true,
+    "enable_optimization": true,
+    "enable_text_improvements": true
+  }
+}

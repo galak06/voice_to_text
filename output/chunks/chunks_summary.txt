@@ -1,0 +1,12 @@
+Original file: voice/rachel_1.wav
+Original duration: 1206.7 seconds
+Number of chunks: 5
+Chunk duration: 300 seconds
+Overlap: 30 seconds
+
+Chunk files:
+1. rachel_1_chunk_001.wav
+2. rachel_1_chunk_002.wav
+3. rachel_1_chunk_003.wav
+4. rachel_1_chunk_004.wav
+5. rachel_1_chunk_005.wav

@@ -1,0 +1,35 @@
+# Core transcription dependencies
+openai-whisper>=20231117
+pyannote.audio==3.1.1
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.1
+pydub>=0.25.1
+
+# Deep learning frameworks
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.30.0
+accelerate>=0.20.0
+
+# Hebrew text processing
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+datasets>=2.0.0
+
+# Data processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Utilities
+tqdm>=4.65.0
+click>=8.1.0
+rich>=13.0.0
+huggingface-hub>=0.15.0
+python-dotenv>=1.0.0
+
+# Optional: for Jupyter notebooks
+jupyter>=1.0.0
+matplotlib>=3.7.0 

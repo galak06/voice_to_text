@@ -1,0 +1,29 @@
+name: voice-to-text
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - torchaudio
+  - ffmpeg
+  - librosa
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - jupyter
+  - pip:
+    - openai-whisper
+    - pyannote.audio
+    - transformers
+    - torch
+    - torchaudio
+    - soundfile
+    - pydub
+    - tqdm
+    - click
+    - rich
+    - python-dotenv 

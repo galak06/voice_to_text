@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebrew Voice to Text Project Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #7f8c8d;
+            margin-top: 25px;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .status.complete {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .status.pending {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        .code {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+        .file-structure {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .file-item {
+            margin: 5px 0;
+            padding: 5px;
+            border-left: 3px solid #3498db;
+            background-color: #ecf0f1;
+        }
+        .hebrew-text {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Arial', sans-serif;
+            background-color: #fefefe;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .action-required {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .action-required h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .btn.warning {
+            background-color: #f39c12;
+        }
+        .btn.warning:hover {
+            background-color: #e67e22;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Hebrew Voice to Text Project</h1>
+        <p><strong>Version:</strong> 1.0 | <strong>Date:</strong> 2025-07-30</p>
+        
+        <h2>📋 Project Overview</h2>
+        <p>This project provides Hebrew audio transcription with automatic speaker separation using OpenAI's Whisper and pyannote.audio for speaker diarization.</p>
+        
+        <h2>✅ Current Status</h2>
+        <div class="status complete">
+            <strong>✅ Basic Transcription:</strong> Working perfectly with Hebrew RTL output
+        </div>
+        <div class="status pending">
+            <strong>⏳ Speaker Diarization:</strong> Pending Hugging Face model terms acceptance
+        </div>
+        
+        <h2>🎯 Key Features</h2>
+        <ul>
+            <li><strong>Hebrew RTL Support:</strong> Full right-to-left Hebrew text output</li>
+            <li><strong>Multiple Audio Formats:</strong> WAV, MP3, M4A, FLAC, AAC</li>
+            <li><strong>Batch Processing:</strong> Process all files in voice/ folder</li>
+            <li><strong>Speaker Separation:</strong> Automatic detection of multiple speakers</li>
+            <li><strong>Environment Management:</strong> Conda-based dependency isolation</li>
+        </ul>
+        
+        <h2>📁 File Structure</h2>
+        <div class="file-structure">
+            <div class="file-item"><strong>voice/</strong> - Input audio files directory</div>
+            <div class="file-item"><strong>output/</strong> - Transcription results directory</div>
+            <div class="file-item"><strong>transcribe_hebrew.py</strong> - Basic Hebrew transcription script</div>
+            <div class="file-item"><strong>transcribe_hebrew_diarized.py</strong> - Transcription with speaker separation</div>
+            <div class="file-item"><strong>run_hebrew.sh</strong> - Basic transcription runner</div>
+            <div class="file-item"><strong>run_hebrew_diarized.sh</strong> - Diarized transcription runner</div>
+            <div class="file-item"><strong>.env</strong> - Environment variables and tokens</div>
+        </div>
+        
+        <h2>🚀 Usage Instructions</h2>
+        
+        <h3>Basic Hebrew Transcription (Working Now)</h3>
+        <div class="code">./run_hebrew.sh --model medium</div>
+        <p>This will process all audio files in the voice/ folder and output Hebrew RTL text.</p>
+        
+        <h3>Example Output</h3>
+        <div class="hebrew-text">
+            [user]<br>
+            וכותב ספרים, מהטב ספרים, מהלה והלדה? אני לא יודעת ניכורי את הספרים האלה הדל...
+        </div>
+        
+        <h2>⚠️ Action Required for Speaker Separation</h2>
+        <div class="action-required">
+            <h3>🔗 Accept Model Terms on Hugging Face</h3>
+            <p>To enable speaker separation (separating the two voices in your audio), you need to accept the terms for the pyannote.audio models:</p>
+            <a href="https://huggingface.co/pyannote/segmentation-3.0" class="btn warning" target="_blank">Accept Model Terms</a>
+            <p><strong>Steps:</strong></p>
+            <ol>
+                <li>Click the button above</li>
+                <li>Log in to Hugging Face if needed</li>
+                <li>Click "Accept" on the model page</li>
+                <li>Return here and run the diarized version</li>
+            </ol>
+        </div>
+        
+        <h2>🔧 Technical Details</h2>
+        
+        <h3>Models Used</h3>
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>Purpose</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>OpenAI Whisper</td>
+                <td>Audio transcription</td>
+                <td>✅ Working</td>
+            </tr>
+            <tr>
+                <td>pyannote.audio</td>
+                <td>Speaker diarization</td>
+                <td>⏳ Pending terms acceptance</td>
+            </tr>
+        </table>
+        
+        <h3>Whisper Model Options</h3>
+        <table>
+            <tr>
+                <th>Model Size</th>
+                <th>Speed</th>
+                <th>Accuracy</th>
+                <th>Recommendation</th>
+            </tr>
+            <tr>
+                <td>tiny</td>
+                <td>Fastest</td>
+                <td>Lowest</td>
+                <td>Quick tests</td>
+            </tr>
+            <tr>
+                <td>base</td>
+                <td>Fast</td>
+                <td>Good</td>
+                <td>Default</td>
+            </tr>
+            <tr>
+                <td>small</td>
+                <td>Medium</td>
+                <td>Better</td>
+                <td>Good balance</td>
+            </tr>
+            <tr>
+                <td>medium</td>
+                <td>Slower</td>
+                <td>High</td>
+                <td>✅ Recommended</td>
+            </tr>
+            <tr>
+                <td>large</td>
+                <td>Slowest</td>
+                <td>Best</td>
+                <td>Maximum accuracy</td>
+            </tr>
+        </table>
+        
+        <h2>📊 Project Statistics</h2>
+        <ul>
+            <li><strong>Test Files Processed:</strong> 1 (rachel_1.wav)</li>
+            <li><strong>Characters Transcribed:</strong> 10,311</li>
+            <li><strong>Speakers Detected:</strong> 2 (in audio, not yet separated)</li>
+            <li><strong>Output Format:</strong> Hebrew RTL with [user] label</li>
+        </ul>
+        
+        <h2>🔍 Troubleshooting</h2>
+        
+        <h3>Common Issues</h3>
+        <table>
+            <tr>
+                <th>Issue</th>
+                <th>Solution</th>
+            </tr>
+            <tr>
+                <td>Model access denied (401/403)</td>
+                <td>Accept model terms on Hugging Face</td>
+            </tr>
+            <tr>
+                <td>No audio files found</td>
+                <td>Place files in voice/ directory</td>
+            </tr>
+            <tr>
+                <td>Conda environment not found</td>
+                <td>Run: conda env create -f environment.yml</td>
+            </tr>
+        </table>
+        
+        <h2>🎯 Next Steps</h2>
+        <ol>
+            <li><strong>Immediate:</strong> Accept pyannote model terms on Hugging Face</li>
+            <li><strong>Test:</strong> Run speaker diarization: <code>./run_hebrew_diarized.sh --model medium</code></li>
+            <li><strong>Enhance:</strong> Add support for more output formats (JSON, VTT)</li>
+            <li><strong>Optimize:</strong> Implement parallel processing for multiple files</li>
+        </ol>
+        
+        <h2>📞 Support</h2>
+        <p>If you encounter any issues:</p>
+        <ul>
+            <li>Check the troubleshooting section above</li>
+            <li>Verify your Hugging Face token is valid</li>
+            <li>Ensure all model terms are accepted</li>
+            <li>Check that audio files are in supported formats</li>
+        </ul>
+        
+        <hr>
+        <p><em>Documentation generated on 2025-07-30 | Hebrew Voice to Text Project v1.0</em></p>
+    </div>
+</body>
+</html> 
