@@ -97,20 +97,17 @@ def process_single_voice_file(audio_file, model="medium"):
     print(f"🎯 Processing: {audio_file.name}")
     print(f"{'='*60}")
     
-    # Step 1: Clean output folders
-    clean_output_folders()
-    
-    # Step 2: Split audio into chunks
+    # Step 1: Split audio into chunks (don't clean output folders)
     if not split_audio_file(audio_file):
         print(f"❌ Failed to split {audio_file.name}")
         return False
     
-    # Step 3: Transcribe chunks
+    # Step 2: Transcribe chunks
     if not transcribe_chunks(model):
         print(f"❌ Failed to transcribe chunks for {audio_file.name}")
         return False
     
-    # Step 4: Merge results
+    # Step 3: Merge results
     if not merge_results():
         print(f"❌ Failed to merge results for {audio_file.name}")
         return False
@@ -133,26 +130,15 @@ def main():
     for i, file in enumerate(voice_files, 1):
         print(f"  {i}. {file.name}")
     
-    # Ask user for model choice
-    print("\n🤖 Choose transcription model:")
-    print("  1. tiny (fastest, lowest quality)")
-    print("  2. base (fast, low quality)")
-    print("  3. small (medium speed, medium quality)")
-    print("  4. medium (slower, good quality) - RECOMMENDED")
-    print("  5. large (slowest, best quality)")
+    # Use medium model by default (no user input required)
+    print("\n🤖 Using medium model (recommended for good quality)")
     
-    model_choice = input("\nEnter model choice (1-5, default 4): ").strip()
-    
-    model_map = {
-        "1": "tiny",
-        "2": "base", 
-        "3": "small",
-        "4": "medium",
-        "5": "large"
-    }
-    
-    model = model_map.get(model_choice, "medium")
+    model = "medium"
     print(f"🎯 Using {model} model")
+    
+    # Clean output folders once at the beginning
+    print(f"\n🧹 Cleaning output folders once at the beginning...")
+    clean_output_folders()
     
     # Process each file
     successful = 0
@@ -166,12 +152,9 @@ def main():
         else:
             failed += 1
         
-        # Ask if user wants to continue
+        # Continue automatically to next file
         if i < len(voice_files):
-            continue_choice = input(f"\nContinue with next file? (y/n, default y): ").strip().lower()
-            if continue_choice in ['n', 'no']:
-                print("⏹️  Processing stopped by user")
-                break
+            print(f"\n🔄 Continuing automatically to next file...")
     
     # Final summary
     print(f"\n{'='*60}")

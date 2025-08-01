@@ -1,51 +1,107 @@
 {
   "created": "2025-07-31T12:22:13.726293",
-  "last_updated": "2025-07-31T13:42:45.105328",
+  "last_updated": "2025-08-01T01:30:03.208471",
   "status": "running",
-  "total_chunks": 5,
+  "total_chunks": 13,
   "processed_chunks": [
     {
       "name": "rachel_1_chunk_001.wav",
-      "output_file": "output/chunks/rachel_1_chunk_001_transcribed_20250731_122907.docx",
+      "output_file": "output/chunks/rachel_1_chunk_001_transcribed_20250731_211149.docx",
       "status": "success",
-      "completed_at": "2025-07-31T12:43:09.626842"
+      "completed_at": "2025-07-31T21:31:12.119509"
     },
     {
       "name": "rachel_1_chunk_002.wav",
-      "output_file": "output/chunks/rachel_1_chunk_002_transcribed_20250731_124311.docx",
+      "output_file": "output/chunks/rachel_1_chunk_002_transcribed_20250731_213114.docx",
       "status": "success",
-      "completed_at": "2025-07-31T13:01:23.741471"
+      "completed_at": "2025-07-31T21:54:18.551116"
     },
     {
       "name": "rachel_1_chunk_003.wav",
-      "output_file": "output/chunks/rachel_1_chunk_003_transcribed_20250731_130125.docx",
+      "output_file": "output/chunks/rachel_1_chunk_003_transcribed_20250731_215420.docx",
       "status": "success",
-      "completed_at": "2025-07-31T13:18:33.243952"
+      "completed_at": "2025-07-31T22:15:57.629562"
     },
     {
       "name": "rachel_1_chunk_004.wav",
-      "output_file": "output/chunks/rachel_1_chunk_004_transcribed_20250731_131835.docx",
+      "output_file": "output/chunks/rachel_1_chunk_004_transcribed_20250731_221559.docx",
       "status": "success",
-      "completed_at": "2025-07-31T13:34:41.441317"
+      "completed_at": "2025-07-31T22:38:50.176264"
     },
     {
       "name": "rachel_1_chunk_005.wav",
-      "output_file": "output/chunks/rachel_1_chunk_005_transcribed_20250731_133443.docx",
+      "output_file": "output/chunks/rachel_1_chunk_005_transcribed_20250731_223852.docx",
       "status": "success",
-      "completed_at": "2025-07-31T13:42:45.105318"
+      "completed_at": "2025-07-31T22:49:19.522252"
+    },
+    {
+      "name": "רחל 1.2_chunk_001.wav",
+      "output_file": "output/chunks/רחל 1.2_chunk_001_transcribed_20250731_224921.docx",
+      "status": "success",
+      "completed_at": "2025-07-31T23:09:46.840207"
+    },
+    {
+      "name": "רחל 1.2_chunk_002.wav",
+      "output_file": "output/chunks/רחל 1.2_chunk_002_transcribed_20250731_230948.docx",
+      "status": "success",
+      "completed_at": "2025-07-31T23:30:31.884123"
+    },
+    {
+      "name": "רחל 1.2_chunk_003.wav",
+      "output_file": "output/chunks/רחל 1.2_chunk_003_transcribed_20250731_233033.docx",
+      "status": "success",
+      "completed_at": "2025-07-31T23:55:01.407084"
+    },
+    {
+      "name": "רחל 1.2_chunk_004.wav",
+      "output_file": "output/chunks/רחל 1.2_chunk_004_transcribed_20250731_235503.docx",
+      "status": "success",
+      "completed_at": "2025-08-01T00:16:22.838495"
+    },
+    {
+      "name": "רחל 1.2_chunk_005.wav",
+      "output_file": "output/chunks/רחל 1.2_chunk_005_transcribed_20250801_001624.docx",
+      "status": "success",
+      "completed_at": "2025-08-01T00:25:32.941623"
+    },
+    {
+      "name": "רחל 1.3_chunk_001.wav",
+      "output_file": "output/chunks/רחל 1.3_chunk_001_transcribed_20250801_002535.docx",
+      "status": "success",
+      "completed_at": "2025-08-01T00:48:18.022167"
+    },
+    {
+      "name": "רחל 1.3_chunk_002.wav",
+      "output_file": "output/chunks/רחל 1.3_chunk_002_transcribed_20250801_004820.docx",
+      "status": "success",
+      "completed_at": "2025-08-01T01:12:36.986518"
+    },
+    {
+      "name": "רחל 1.3_chunk_003.wav",
+      "output_file": "output/chunks/רחל 1.3_chunk_003_transcribed_20250801_011239.docx",
+      "status": "success",
+      "completed_at": "2025-08-01T01:30:03.208462"
     }
   ],
   "failed_chunks": [],
   "current_chunk": null,
   "output_files": [
-    "output/chunks/rachel_1_chunk_001_transcribed_20250731_122907.docx",
-    "output/chunks/rachel_1_chunk_002_transcribed_20250731_124311.docx",
-    "output/chunks/rachel_1_chunk_003_transcribed_20250731_130125.docx",
-    "output/chunks/rachel_1_chunk_004_transcribed_20250731_131835.docx",
-    "output/chunks/rachel_1_chunk_005_transcribed_20250731_133443.docx"
+    "output/chunks/rachel_1_chunk_001_transcribed_20250731_211149.docx",
+    "output/chunks/rachel_1_chunk_002_transcribed_20250731_213114.docx",
+    "output/chunks/rachel_1_chunk_003_transcribed_20250731_215420.docx",
+    "output/chunks/rachel_1_chunk_004_transcribed_20250731_221559.docx",
+    "output/chunks/rachel_1_chunk_005_transcribed_20250731_223852.docx",
+    "output/chunks/רחל 1.2_chunk_001_transcribed_20250731_224921.docx",
+    "output/chunks/רחל 1.2_chunk_002_transcribed_20250731_230948.docx",
+    "output/chunks/רחל 1.2_chunk_003_transcribed_20250731_233033.docx",
+    "output/chunks/רחל 1.2_chunk_004_transcribed_20250731_235503.docx",
+    "output/chunks/רחל 1.2_chunk_005_transcribed_20250801_001624.docx",
+    "output/chunks/רחל 1.3_chunk_001_transcribed_20250801_002535.docx",
+    "output/chunks/רחל 1.3_chunk_002_transcribed_20250801_004820.docx",
+    "output/chunks/רחל 1.3_chunk_003_transcribed_20250801_011239.docx"
   ],
   "settings": {
-    "model_size": "medium",
+    "model_size": "large",
     "enable_cache": true,
     "enable_optimization": true,
     "enable_text_improvements": true
